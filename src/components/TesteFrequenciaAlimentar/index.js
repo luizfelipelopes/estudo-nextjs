@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Recomendacao from '../Recomendacao';
 import Form from '../Form';
 
-var Avaliacao = require ('../../pages/FrequenciaAlimentar/classes/Avaliacao.js');
+var Avaliacao = require ('../../classes/Avaliacao.js');
 
 function TesteFrequenciaAlimentar()
 {
