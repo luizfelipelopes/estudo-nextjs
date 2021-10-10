@@ -1,4 +1,4 @@
-import TesteFrequenciaAlimentar from './TesteFrequenciaAlimentar';
+import TesteFrequenciaAlimentar from '../../components/TesteFrequenciaAlimentar';
 // import { Body } from './styles';
 
 function Home() {
