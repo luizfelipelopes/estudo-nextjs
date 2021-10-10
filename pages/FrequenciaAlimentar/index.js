@@ -1,5 +1,5 @@
 import TesteFrequenciaAlimentar from '../../components/TesteFrequenciaAlimentar';
-// import { Body } from './styles';
+import { Body } from '../../styles/FrequenciaAlimentar/styles';
 
 function FrequenciaAlimentar() {
     return (
@@ -9,11 +9,11 @@ function FrequenciaAlimentar() {
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
                 </style>
-                {/* <Body> */}
+                <Body>
                     <h2>Teste Frequência Alimentar</h2>
                     <p>Descubra se sua alimentação é saudável:</p>
                     <TesteFrequenciaAlimentar />
-                {/* </Body> */}
+                </Body>
             </div>
         )
 }
