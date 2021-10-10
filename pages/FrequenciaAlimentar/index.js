@@ -6,12 +6,11 @@ function FrequenciaAlimentar() {
 
 
             <div>
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-                </style>
                 <Body>
-                    <h2>Teste Frequência Alimentar</h2>
-                    <p>Descubra se sua alimentação é saudável:</p>
+                   <header>
+                        <h2>Teste Frequência Alimentar</h2>
+                        <p>Descubra se sua alimentação é saudável:</p>
+                    </header>
                     <TesteFrequenciaAlimentar />
                 </Body>
             </div>

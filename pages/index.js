@@ -1,12 +1,17 @@
-import { GlobalStyles } from "../styles/globals";
+import GlobalStyle  from "../styles/globals";
 import FrequenciaAlimentar from "./FrequenciaAlimentar";
 
 function Home(){
 
     return(
-        <GlobalStyles>
+
+        <div>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+            </style>
+            <GlobalStyle />
             <FrequenciaAlimentar />
-        </GlobalStyles>
+        </div>
     );
 
 
