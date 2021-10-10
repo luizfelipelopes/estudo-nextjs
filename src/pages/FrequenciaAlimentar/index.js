@@ -1,7 +1,7 @@
 import TesteFrequenciaAlimentar from '../../components/TesteFrequenciaAlimentar';
 // import { Body } from './styles';
 
-function Home() {
+function FrequenciaAlimentar() {
     return (
 
 
@@ -18,4 +18,4 @@ function Home() {
         )
 }
 
-export default Home
+export default FrequenciaAlimentar
