@@ -12,5 +12,3 @@ export const Body = styled.body`
   }
 
 `;
-
-export default styles;
