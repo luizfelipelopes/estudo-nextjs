@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Recomendacao from '../Recomendacao';
 import Form from '../Form';
-import './styles.js';
 
 var Avaliacao = require ('../classes/Avaliacao.js');
 
