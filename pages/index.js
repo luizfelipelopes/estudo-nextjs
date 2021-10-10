@@ -1,12 +1,15 @@
+import { GlobalStyles } from "../styles/globals";
 import FrequenciaAlimentar from "./FrequenciaAlimentar";
-
 
 function Home(){
 
-
     return(
-        <FrequenciaAlimentar />
+        <GlobalStyles>
+            <FrequenciaAlimentar />
+        </GlobalStyles>
     );
+
+
 }
 
 
