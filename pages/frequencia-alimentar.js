@@ -6,7 +6,7 @@ import { Body } from '../styles/FrequenciaAlimentar/styles';
 function FrequenciaAlimentar() {
     return (
             <div>
-                <MyApp />
+                <MyApp pageProps={FrequenciaAlimentar}/>
                 <Body>
                     <Link href="/">
                         <a>Home</a>

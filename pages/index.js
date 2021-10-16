@@ -6,7 +6,7 @@ function Home(){
     return(
 
         <div>
-            <MyApp />
+            <MyApp pageProps={Home}/>
             <h1>App Vida Saudável</h1>
 
             <Link href="/frequencia-alimentar">
