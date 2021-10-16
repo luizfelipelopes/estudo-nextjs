@@ -2,7 +2,7 @@ import GlobalStyle  from "../styles/globals";
 import FrequenciaAlimentar from "./FrequenciaAlimentar";
 import Link from 'next/link';
 
-function Home(){
+function Frequencia(){
 
     return(
 
@@ -13,10 +13,9 @@ function Home(){
             <GlobalStyle /> */}
 
 
-            <h1>Home</h1>
-
-            <Link href="/frequencia-alimentar">
-                <a>Frequência Alimentar</a>
+            <h1>Frequência Alimentar</h1>
+            <Link href="/">
+                <a>Home</a>
             </Link>
 
             {/* <FrequenciaAlimentar /> */}
@@ -26,4 +25,4 @@ function Home(){
 
 }
 
-export default Home
+export default Frequencia
