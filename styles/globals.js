@@ -3,8 +3,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
-
-
     *, *:before, *:after{
 
         margin:0;
@@ -28,8 +26,17 @@ const GlobalStyle = createGlobalStyle`
         text-align: center;
     }
 
+    h1{
+        margin-bottom: 30px;
+    }
+
     p{
         margin-bottom: 30px;
+    }
+
+    a{
+        color #fff;
+        margin: 0 5px 30px 5px;
     }
 
 

@@ -1,4 +1,4 @@
-import MyApp from './_app';
+import GlobalStyle  from "../styles/globals";
 import Link from 'next/link';
 import TesteFrequenciaAlimentar from '../components/TesteFrequenciaAlimentar';
 import { Body } from '../styles/FrequenciaAlimentar/styles';
@@ -6,12 +6,12 @@ import { Body } from '../styles/FrequenciaAlimentar/styles';
 function FrequenciaAlimentar() {
     return (
             <div>
-                <MyApp pageProps={FrequenciaAlimentar}/>
+                <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');</style>
+                <GlobalStyle />
                 <Body>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
+
                    <header>
+                        <Link href="/"><a>Home</a></Link>
                         <h2>Teste Frequência Alimentar</h2>
                         <p>Descubra se sua alimentação é saudável:</p>
                     </header>
