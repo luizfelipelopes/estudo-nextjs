@@ -2,10 +2,14 @@ import "./_app.css";
 import GlobalStyle  from "../styles/globals";
 
 
-function MyApp(){
+const MyApp = ({ Component, pageProps }) => {
+
     return (
-        <div><GlobalStyle /></div>
+        <GlobalStyle>
+            <Component {...pageProps} />
+        </GlobalStyle>
     );
+
 }
 
 

@@ -7,7 +7,6 @@ function Home(){
 
         <div>
             <MyApp />
-
             <h1>App Vida Saudável</h1>
 
             <Link href="/frequencia-alimentar">
