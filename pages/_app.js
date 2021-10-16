@@ -1,6 +1,7 @@
 import "./_app.css";
 import GlobalStyle  from "../styles/globals";
 import Home from "./index";
+import FrequenciaAlimentar from "./frequencia-alimentar"
 
 function MyApp({ Component, pageProps }) {
 
