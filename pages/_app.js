@@ -1,15 +1,16 @@
 import "./_app.css";
 import GlobalStyle  from "../styles/globals";
+import Home from "./index";
 
-
-const MyApp = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }) {
 
     return (
+        <div>
         <GlobalStyle>
-            <Component {...pageProps} />
+            <FrequenciaAlimentar />
         </GlobalStyle>
+        </div>
     );
-
 }
 
 
