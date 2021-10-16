@@ -6,24 +6,25 @@ function Tempo(props) {
     return (
         <div>
             <div>{dynamicDateString} Dinâmico</div>
-            <div>{props.staticDateString} Estático - com delay</div>
+            <div>{props.staticDateString} Estático</div>
         </div>
     );
 
 }
 
-export async function getStaticProps() {
+export function getStaticProps() {
     console.log('> Passsando pelo getStaticProps();');
     console.log('> Adicionando delay de 5 segundos');
 
-    await delay(5000);
+    // await delay(5000);
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();
 
     return {
         props: {
             staticDateString
-        }
+        },
+        revalidate: 1
     }
 }
 
