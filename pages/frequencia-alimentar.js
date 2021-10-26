@@ -9,9 +9,10 @@ function FrequenciaAlimentar() {
                 <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');</style>
                 <GlobalStyle />
                 <Body>
-
                    <header>
                         <Link href="/"><a>Home</a></Link>
+                        <Link href="/alarmes"><a>Alarmes Água e Comida</a></Link>
+                        <Link href="/calendario"><a>Calendário Saudável</a></Link>
                         <h2>Teste Frequência Alimentar</h2>
                         <p>Descubra se sua alimentação é saudável:</p>
                     </header>
@@ -22,28 +23,3 @@ function FrequenciaAlimentar() {
 }
 
 export default FrequenciaAlimentar
-
-// function Frequencia(){
-
-//     return(
-
-//         <div>
-//             {/* <style>
-//                 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-//             </style>
-//             <GlobalStyle /> */}
-
-
-//             <h1>Frequência Alimentar</h1>
-//             <Link href="/">
-//                 <a>Home</a>
-//             </Link>
-
-//             {/* <FrequenciaAlimentar /> */}
-//         </div>
-//     );
-
-
-// }
-
-// export default Frequencia
