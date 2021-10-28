@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
 
     .modal-content {
         width: 90%;
-        height: 600px;
+        height: 620px;
         overflow-y: auto;
         background-color: #fff;
         color: #333;
@@ -97,13 +97,14 @@ const GlobalStyle = createGlobalStyle`
         flex-wrap: wrap;
     }
 
-    .modal header {
-        text-align: center;
+    .modal .sections a{
+        color: inherit;
     }
 
-
-
-
+    .modal header {
+        font-weight: bold;
+        text-align: center;
+    }
 
     .modal section {
         width: 50%;
@@ -112,10 +113,37 @@ const GlobalStyle = createGlobalStyle`
         // background: red;
     }
 
+    .modal section header {
+        font-weight: normal;
+        min-height: 150px;
+        text-align: left;
+    }
+
+    .modal section h3 {
+        margin-bottom: 30px;
+    }
+
+    .modal section .form-group label{
+        font-weight:bold;
+    }
+
     @media(max-width: 768px){
         .modal section {
+            text-align: center;
             width: 100%;
             // padding: 0 30px;
+        }
+
+        .modal section header {
+            text-align: center;
+        }
+
+        .modal section .form-group input{
+            text-align:center;
+        }
+
+        .modal .modal-footer{
+            text-align: center;
         }
     }
 
