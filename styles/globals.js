@@ -94,15 +94,29 @@ const GlobalStyle = createGlobalStyle`
         // background: red;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .modal header {
         text-align: center;
     }
 
+
+
+
+
     .modal section {
         width: 50%;
         padding: 0 30px;
+        // margin-right: 5px;
+        // background: red;
+    }
+
+    @media(max-width: 768px){
+        .modal section {
+            width: 100%;
+            // padding: 0 30px;
+        }
     }
 
 
