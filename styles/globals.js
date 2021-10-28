@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
         top: 0;
         right: 0;
         bottom: 0;
+        // height: 200px;
         background-color: rgba(0,0,0,0.5);
         display: flex;
         align-items: center;
@@ -52,6 +53,7 @@ const GlobalStyle = createGlobalStyle`
         opacity: 0;
         transition: all 0.3s ease-in-out;
         pointer-events: none;
+        // overflow-y: auto;
     }
 
     .modal.show{
@@ -61,6 +63,8 @@ const GlobalStyle = createGlobalStyle`
 
     .modal-content {
         width: 90%;
+        height: 600px;
+        overflow-y: auto;
         background-color: #fff;
         color: #333;
         transform: translateY(-200px);
