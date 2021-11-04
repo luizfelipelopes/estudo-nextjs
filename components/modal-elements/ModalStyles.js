@@ -24,7 +24,7 @@ export const ModalClose = styled.div`
     cursor: pointer;
     z-index: 4;
 
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 768px) {
       right: 50%;
       transform: translateX(50%);
     }
@@ -32,7 +32,7 @@ export const ModalClose = styled.div`
 `;
 
 export const ModalNav = styled.div`
-  @media only screen and (max-width: 680px) {
+  @media only screen and (max-width: 768px) {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,7 +56,7 @@ export const ModalNav = styled.div`
     cursor: pointer;
     z-index: 3;
 
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 768px) {
       background: rgba(0, 0, 0, 0.7);
       border-radius: 50%;
     }
