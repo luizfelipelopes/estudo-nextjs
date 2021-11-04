@@ -59,7 +59,7 @@ export const ModalNav = styled.div`
     @media only screen and (max-width: 768px) {
       background: rgba(0, 0, 0, 0.7);
       border-radius: 50%;
-      top: 270px;
+      top: 260px;
     }
   }
 
