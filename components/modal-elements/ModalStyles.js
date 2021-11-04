@@ -18,7 +18,7 @@ export const ModalClose = styled.div`
   svg {
     position: fixed;
     top: 16px;
-    right: 16px;
+    right: 26px;
     width: 34px;
     height: 34px;
     cursor: pointer;
@@ -55,6 +55,11 @@ export const ModalNav = styled.div`
     line-height: 64px;
     cursor: pointer;
     z-index: 3;
+
+    @media only screen and (max-width: 680px) {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+    }
   }
 
   svg:first-child {
@@ -110,6 +115,8 @@ export const ModalContent = styled.div`
   line-height: 1.5;
   color: #222f3e;
   z-index: 2;
+  font-size: 1em;
+
 
   svg {
     margin-bottom: 20px;
@@ -121,12 +128,12 @@ export const ModalContent = styled.div`
   }
 
   a {
-      color: #000;
+      color: #000 !important;
       text-decoration: none;
   }
 
   a:hover {
-    color: #14BD95;
+    color: #14BD95 !important;
   }
 
 
@@ -140,15 +147,17 @@ export const ModalContent = styled.div`
   }
 
   p {
-    font-size: 20px;
+    font-size: 1em;
   }
 
   header {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
   }
 
   .form-section{
-    margin-top: 30px;
+    padding-top: 30px;
+    font-size: 0.9em;
   }
 
   .form-section .form-group {
@@ -163,9 +172,10 @@ export const ModalContent = styled.div`
     width: 100px;
     padding: 5px 0;
     padding-left: 5px;
-    // border-radius: 2px;
-    // margin-bottom: 2px;
-    // border: 0.5px solid #cc;
+  }
+
+  @media only screen and (max-width: 680px) {
+    font-size: 0.9em;
   }
 
 
@@ -181,6 +191,7 @@ export const BorderLeftEl = styled.div`
   @media only screen and (max-width: 680px) {
     left: -40px;
   }
+
 `;
 
 export const BorderRightEl = styled.div`
@@ -192,5 +203,17 @@ export const BorderRightEl = styled.div`
 
   @media only screen and (max-width: 680px) {
     right: -40px;
+  }
+`;
+
+
+export const Planet = styled.div`
+  font-size: 0.5em !important;
+
+
+  #kawaii-planet__shape {
+    fill: red !important;
+    background: red !important;
+    width: 10px !important;
   }
 `;

@@ -10,95 +10,49 @@ import { Cat, Ghost, IceCream, Mug, Planet } from "react-kawaii";
 import { FcAlarmClock } from "react-icons/fc";
 import {FormsAlarme} from "../components/FormAlarme/styles";
 
-class Alarmes extends React.Component {
+function Alarmes (props)
+{
+    const inputs = {};
+    const [input, setInput] = useState({});
+    const [state, setState] = useState({showModal: false});
 
-    constructor(props) {
-        super(props);
-        console.log(props);
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
+    let toggleModal = () => {
 
-    state = {
-        showModal: false
-    }
-
-    inputs = {};
-
-    setInputs = (input) => {
-        this.inputs.push(input);
-    }
-
-    toggleModal = () => {
-        this.setState(prevState => {
-            return { showModal: !prevState.showModal };
-        });
+        setState({ showModal: !state.showModal });
     };
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
+    let handleSubmit = async (event) => {
 
-        this.inputs[name] = value;
-      }
-
-
-      handleSubmit(event){
         event.preventDefault();
-        // console.log(this.props);
-        console.log(event.target.elements);
         const total = event.target.elements.length;
-
-        console.log(total);
-        console.log(this.inputs);
 
         for(let i = 0; i < total; i++){
 
-          let target = event.target.elements[i];
-          console.log(target);
+            let target = event.target.elements[i];
 
-          if(target.type !== 'submit'){
-            let value = target.type === 'checkbox' ? target.checked : target.value;
-            let name = target.name;
-            console.log(value, name);
+            if((target.type === 'checkbox' || target.type === 'radio') && !target.checked){
+                continue;
+            }
 
-            this.inputs[name] = value;
-
-            // this.setInputs({
-            //   [name]: value
-            // });
-
-          }
+            if(target.type !== 'submit'){
+                let value = target.value;
+                let name = target.name;
+                inputs[name] = value;
+            }
 
         }
 
-        console.log(this.inputs);
-      }
+        recoverIMC();
 
 
+    }
 
-    render() {
+        const recoverIMC = async () => {
 
-        const recoverIMC = async event => {
-
-            event.preventDefault();
-
-            console.log('evento', event);
-
-
-            let peso = Number(document.getElementById('peso').value);
-            let altura = Number(document.getElementById('altura').value);
-            let idade = document.getElementById('idade').value;
-            // let massa = document.querySelector('input[name=massa]:checked').value;
-
-            let imc = peso/(altura*altura);
-
-            console.log(peso, altura, imc.toFixed(2));
-
-            console.log(this.state);
-            console.log(this.toggleModal);
-            console.log(this.state);
+            let imc = Number(inputs.peso)/(Number(inputs.altura)*Number(inputs.altura));
+            inputs['imc'] = imc.toFixed(2);
+            setInput(inputs);
+            console.log(inputs);
 
         }
 
@@ -125,13 +79,13 @@ class Alarmes extends React.Component {
                         <Link href="/calendario"><a>Calendário Saudável</a></Link>
                     </header>
 
-                    {this.state.showModal && (
+                    {state.showModal && (
 
-                    <Modal toggleModal={this.toggleModal} >
+                    <Modal toggleModal={toggleModal} >
 
                         <div>
                             <header>
-                                <p><strong>IMC:</strong> 23,1</p>
+                                <p><strong>IMC:</strong> {input.imc}</p>
                                 <p><strong>Ingestão de Água:</strong> 2310</p>
                             </header>
 
@@ -220,16 +174,13 @@ class Alarmes extends React.Component {
 
                     )}
                     <FormsAlarme>
-                        <FormAlarme toggleModal={this.toggleModal} recoverIMC={this.handleSubmit} />
+                        <FormAlarme toggleModal={toggleModal} recoverData={handleSubmit} />
                     </FormsAlarme>
 
                 </div>
             </ThemeProvider>
 
         );
-
-}
-
 }
 
 
